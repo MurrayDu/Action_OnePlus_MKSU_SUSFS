@@ -49,12 +49,13 @@ on:
         type: choice
         description: "处理器代号"
         required: true
-        default: kalama
+        default: Kryo
         options:
           - crow
           - waipio
           - kalama
           - pineapple
+          - Kryo
           - sun
       ANDROID_VERSION:
         type: choice
