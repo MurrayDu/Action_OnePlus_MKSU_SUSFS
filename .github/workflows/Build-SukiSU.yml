@@ -6,7 +6,7 @@ on:
         type: choice
         description: "分支"
         required: true
-        default: sm8550
+        default: sm8150
         options:
           - sm7550
           - sm7675
@@ -15,11 +15,12 @@ on:
           - sm8550
           - sm8650
           - sm8750
+          - sm8150
       FEIL:
         type: choice
         description: "配置文件"
         required: true
-        default: oneplus_ace2pro_v
+        default: oneplus_7pro
         options:
           - oneplus_nord_ce4_v
           - oneplus_ace_3v_v
@@ -41,6 +42,7 @@ on:
           - oneplus_pad2_v
           - oneplus_13
           - oneplus_13t
+          - oneplus_7pro
           - oneplus_ace5_pro
           - GitHub有bug可能不显示最后一项,误使用此项
       CPUD:
@@ -58,7 +60,7 @@ on:
         type: choice
         description: "内核安卓版本"
         required: true
-        default: android13
+        default: android12
         options:
           - android12
           - android13
@@ -68,17 +70,18 @@ on:
        type: choice
        description: "内核版本"
        required: true
-       default: "5.15"
+       default: "4.14"
        options:
          - "5.10"
          - "5.15"
          - "6.1"
          - "6.6"
+         - "4.14"
       BUILD_METHOD:
         type: choice
         description: "编译方式"
         required: true
-        default: gki
+        default: perf
         options:
           - gki
           - perf
@@ -121,7 +124,7 @@ jobs:
 
       - name: Configure Git
         run: |
-          git config --global user.name "Numbersf"
+          git config --global user.name "MurrayDu"
           git config --global user.email "263623064@qq.com"
 
       - name: Install dependencies
